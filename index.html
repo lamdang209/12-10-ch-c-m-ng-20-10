@@ -19,9 +19,9 @@
     <img id="myImage" src="" alt="20/10">
 
     <script>
-        // Lấy tên file từ đường link (Ví dụ: .../?img=thuy.jpg)
+        // Tự động đọc tên file ảnh từ đuôi ?img=...
         const urlParams = new URLSearchParams(window.location.search);
-        const imageName = urlParams.get('img') || 'default.jpg';
+        const imageName = urlParams.get('img') || 'default.jpg'; // Nếu không có thì hiện default.jpg
         document.getElementById('myImage').src = imageName;
     </script>
 </body>
